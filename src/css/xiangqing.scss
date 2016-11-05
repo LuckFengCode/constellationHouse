@@ -1,0 +1,271 @@
+@charset "utf-8";
+/*公共样式*/
+html,body,div,ul,li,h1,h2,h3,h4,h5,h6,a,strong,span,em,i,p{
+	padding:0;
+	margin:0;
+}
+strong{font-size:normal;}
+a{text-decoration:none;}
+li{list-style:none;}
+em,i{font-style:normal;}
+.clear{
+	zoom:1;
+	&::after{
+		content:"";
+		display:block;
+		width:0;
+		clear:both;
+		overflow:hidden;
+	}
+}
+body{
+		width: 6.4rem;
+	
+}
+#indexHeader{
+	margin-bottom:0.8rem;
+}
+
+/*style*/
+.constellation-info{
+	background: #B6D8EF url(../images/xingzuo_bg.gif) no-repeat center 0;
+	background-size:auto 4.6rem;
+	padding:0.4rem 0 0.2rem;
+}
+.constellation-info .top{
+	margin:0 0.2rem;
+}
+.constellation-info .top .img{
+	display:block;
+	width:1.86rem;
+	height:1.86rem;
+	padding:0.1rem;
+	background-color:rgba(255,255,255,0.5);
+	margin:0 auto;
+	border-radius:50%;
+	margin-bottom:0.1rem;
+}
+.constellation-info .top .img img{
+	display:block;
+	width:1.86rem;
+	height:1.86rem;
+}
+.constellation-info .top h1{
+	text-align:center;
+	color:#fff;
+	font-size:0.36rem;
+
+}
+.constellation-info .top h1 strong{
+	display:block;
+	font-weight:600;
+	height:1.06rem;
+	line-height:0.5rem;
+}
+.constellation-info .top h1 span{
+	display:block;
+	font-size:0.32rem;
+	height:0.5rem;
+}
+.constellation-info .top h1 small{
+	display:block;
+	font-size:0.2rem;
+	font-weight:500;
+	height:0.36rem;
+}
+.constellation-info .top .mT{
+	display:flex;
+	flex-wrap:wrap;
+	
+}
+.constellation-info .top .mT li{
+	width:33.33%;
+	font-size:0.32rem;
+	color:#248ec5;
+	flex-direction:column;
+	text-align:center;
+	height:0.82rem;
+	margin-top:0.2rem;
+}
+.constellation-info .top .mT li span{
+	font-size:0.28rem;
+	display:block;
+	height:0.36rem;
+	line-height:0.36rem;
+	color:#6eb5e1;
+}
+.constellation-info .top p{
+	margin:0.2rem 0;
+	padding-top:0.2rem;
+	border-top:1px solid #9cccea;
+	line-height:0.44rem;
+	color:#555;
+	font-size:0.3rem;
+}
+.tab-sex{
+	margin-top:0.2rem;
+	width:100%;
+}
+.tab-sex .tab{
+	width:100%;
+}
+.tab-sex .tab span{
+	display:block;
+	float:left;
+	font-size:0.32rem;
+	width:50%;
+	line-height:0.62rem;
+	text-align:center;
+	border-bottom:2px solid rgba(255,255,255,0.3);
+}
+
+.tab-sex .tab .cur-gilr{
+	color:#EA588B;
+	border-bottom:2px solid #E57EA3;
+}
+.tab-sex .tab .cur-man{
+	color:#1286C7;
+	border-bottom:2px solid #54ACEA;
+}
+.tab-sex ul{
+	padding:0.2rem;
+}
+.tab-sex ul li{
+	margin:0.1rem;
+	font-size:0.3rem;
+	text-overflow:ellipsis;
+	overflow:hidden;
+	white-space:nowrap;
+	color:#555;
+}
+.tab-sex ul li strong{
+	color:#015A90;
+	font-weight:600;
+}
+.tab-sex ul li a{
+	display:block;
+	height:0.6rem;
+	line-height:0.6rem;
+	color:#69B3E8;
+	border-radius:5px;
+	background:rgba(255,255,255,0.52);
+	text-align:center;
+}
+.tab-sex ul li .gilr-info{
+	color:#EA588B
+}
+.tab-sex ul li .man-info{
+	color:#1286C7;
+}
+.tab-sex .man{
+	display:none;
+}
+.fortune h3,h3{
+	font-size:0.3rem;
+	height:0.6rem;
+	line-height:0.3rem;
+	padding-top:0.1rem;
+	color:#555;
+	margin:0 0.2rem;
+	border-top:1px solid  #9cccea;
+	font-weight:500;
+}
+.fortune h3 .star{
+	display:inline-block;
+	width:80px;
+	height:16px;
+	background:url(../images/icon_star2.png) repeat-x;
+	background-size:16px auto;
+	vertical-align:bottom;
+}
+.fortune h3 .star em{
+	display:block;
+	height:16px;
+	width:80%;
+	background:url(../images/icon_star2.png) repeat-x left bottom;
+	background-size:16px auto;
+}
+.fortune h3 a,h3 a{
+	display:block;
+	width:0.6rem;
+	height:0.6rem;
+	background:url(../images/icon_position2.png) no-repeat right 50%;
+	background-size:16px auto;
+	float:right;
+}
+.fortune p{
+	line-height:0.44rem;
+	margin:0 0.2rem 0.3rem;
+}
+.fortune p a{
+	display:block;
+	color:#666;
+	font-size:0.3rem;
+}
+.pair_top{
+	display:flex;
+}
+.pair_top li{
+	flex:1;
+	align-self:start;
+}
+.pair_top li a{
+	display:block;
+}
+.pair_top li a span{
+	display:block;
+	background:rgba(255,255,255,0.4);
+	width:1.2rem;
+	height:1.2rem;
+	border-radius:60px;
+	margin:0 auto;
+}
+.pair_top li a span img{
+	display:block;
+	width:1.2rem;
+	height:auto;
+}
+.pair_top li a em{
+	display:block;
+	height:0.4rem;
+	width:1rem;
+	border-radius:20px;
+	background:rgba(255,255,255,0.4);
+	color:#3A95D5;
+	line-height:0.4rem;
+	text-align:center;
+	margin:0.1rem auto 0;
+	font-size:0.24rem;
+}
+.other-xz{
+	padding:0.2rem;
+	overflow:hidden;
+}
+.other-xz ul{
+	display:flex;
+	width:16.8rem;
+}
+.other-xz ul li{
+	width:1.2rem;
+	height:1.2rem;
+	margin-right:0.2rem;
+	border-radius:35px;
+	background-color:rgba(255,255,255,0.4);
+	font-size:0.24rem;
+	text-align:center;
+
+}
+.other-xz ul li a{
+	display:block;
+	width: 100%;
+	height:100%;
+	color:#248ec5;
+}
+.other-xz ul li a strong{
+	display:block;
+	margin-top:0.26rem;
+}
+.other-xz ul li a span{
+	display:block;
+	margin-top:0.24rem;
+}

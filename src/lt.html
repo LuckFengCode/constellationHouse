@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<title></title>
+		<link rel="stylesheet" href="css/lt.css"/>
+		<link rel="stylesheet" href="css/swiper.min.css" />
+		<script src="js/require.js"></script>
+		<script src="js/config.js"></script>
+		
+	</head>
+	<body>
+		<div class="focus box">
+			<div class="wrap swiper-container">
+				<ul class=" swiper-wrapper sw-box" style="width:3216px;">
+				</ul>
+			</div>
+		</div>
+		<div class="header box">
+			<ul class="lit_text">
+				<li>
+					<strong class="fc2">
+						<a href="#">知识</a>
+					</strong>
+					<em>|</em>
+					<a href="" title="不论别的，仅因丑才单身的星座">不论别的，仅因丑才单身的星座</a>
+				</li>
+				<li>
+					<strong class="fc2">
+						<a href="#">情感</a>
+					</strong>
+					<em>|</em>
+					<a href="" title="这些星座情侣是注定要走过荆棘">这些星座情侣是注定要走过荆棘</a>
+				</li>
+				<li>
+					<strong class="fc2">
+						<a href="#">性格</a>
+					</strong>
+					<em>|</em>
+					<a href="" title="最容易中激将法的四大可爱星座">最容易中激将法的四大可爱星座</a>
+				</li>
+				<li>
+					<strong class="fc2">
+						<a href="#">情感</a>
+					</strong>
+					<em>|</em>
+					<a href="" title="不舍只让你从自己世界路过星座">不舍只让你从自己世界路过星座</a>
+				</li>
+				<li>
+					<strong class="fc2">
+						<a href="#">爱情</a>
+					</strong>
+					<em>|</em>
+					<a href="" title="星座浅说，舒淇与冯德伦的爱情">星座浅说，舒淇与冯德伦的爱情</a>
+				</li>
+			</ul>
+		</div>
+	</body>
+	<script>
+		require(["jquery"],function($){
+			$(function(){
+				function setFontSize(){
+					// 设计稿 640px
+					var width = document.documentElement.clientWidth;
+					//使用设计稿与设备宽度的比例计算 font size
+					var fontSize = (width / 640) * 100;
+					document.getElementsByTagName("html")[0].style.fontSize = fontSize + "px";
+				}
+				//监听 resize 变化
+				$(window).on("resize",setFontSize);
+				//立即执行 计算 font size
+				setFontSize();
+			});
+		});
+
+	</script>
+	<script src="js/lt.js"></script>
+	
+</html>

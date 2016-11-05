@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/xiangqing.css">
+	<link rel="stylesheet" href="css/common.css"/>
+	<link rel="stylesheet" href="css/page.css">
+	<link rel="stylesheet" href="css/swiper.min.css" />
+	<script src="js/zepto.min.js"></script>
+	<script src="js/require.js"></script>
+	<script src="js/config.js"></script>
+	<script src="js/xiangqing.js"></script>
+	<script src="js/common.js"></script>
+	<script src="js/page.js"></script>
+	
+
+
+	<script>
+		require(["load","jquery"],function(load,$){
+			load($('#indexHeader'),"html/header.html",function(){
+					common();
+				});
+			load($('#liu'),"page.html",function(){
+			
+				page();
+			});
+		})
+	</script>
+
+</head>
+<body>
+	<div id="indexHeader"></div>
+	<section>
+		<div class="constellation-info">
+			<div class="top">
+				<span class="img">
+					
+				</span>
+				<h1>
+					<strong><i></i><span></span></strong>
+					<small></small>
+				</h1>
+				<ul class="mT">
+			
+				</ul>	
+				<p></p>	
+			</div>
+			<div class="tab-sex">
+				<div class="tab clear">
+					<span class="cur-gilr">白羊座女生</span>
+					<span>白羊座男生</span>
+				</div>
+				<ul class="gilr clear">
+					<li><strong>特点：</strong>勇敢、火热、大方</li>
+					<li><strong>弱点：</strong>稚拙、刚愎自用</li>
+					<li><strong>爱情：</strong>感情充沛、富于表达力</li>
+					<li>豪放率真的白羊座女生，富有强大的想象力，热...</li>
+					<li><a href="##" class="gilr-info">更多白羊座女生的特性</a></li>
+				</ul>
+				<ul class="man clear">
+					<li><strong>特点：</strong>勇敢、火热、大方</li>
+					<li><strong>弱点：</strong>稚拙、刚愎自用</li>
+					<li><strong>爱情：</strong>感情充沛、富于表达力</li>
+					<li>豪放率真的白羊座女生，富有强大的想象力，热...</li>
+					<li><a href="##" class="man-info">更多白羊座男生的特性</a></li>
+				</ul>
+			</div>
+			<div class="fortune">
+				<h3>
+					今日运势：
+					<em class="star"><em></em></em>
+					<a href="##"></a>
+				</h3>
+				<p></p>
+			</div>
+			<h3>
+				最佳配对星座
+				<a href="##"></a>
+			</h3>
+			<ul class="pair_top">
+				<li><a href="##"><span><img src="images/xz_5.png" alt=""></span><em>100%</em></a></li>
+				<li><a href="##"><span><img src="images/a_Sagittarius.png" alt=""></span><em>100%</em></a></li>
+				<li><a href="##"><span><img src="images/a_Gemini.png" alt=""></span><em>100%</em></a></li>
+				<li><a href="##"><span><img src="images/a_Aquarius.png" alt=""></span><em>100%</em></a></li>
+			</ul>
+			<h3>
+				看看其他星座
+				<a href="##"></a>
+			</h3>
+			<div id="other">
+			<div class="other-xz swiper-container">
+				<ul class="swiper-wrapper" style="width:840px;">
+					<li class="sw-li swiper-slide"><a href="#"><strong>白羊座</strong><span>Aries</span></a></li>
+					<li class="sw-li swiper-slide"><a href="#"><strong>金牛座</strong><span>Taurus</span></a></li>
+					<li class="sw-li swiper-slide"><a href="#"><strong>双子座</strong><span>Gemini</span></a></li>
+					<li class="sw-li swiper-slide"><a href="#"><strong>巨蟹座</strong><span>Cancer</span></a></li>
+					<li class="sw-li swiper-slide"><a href="#"><strong>狮子座</strong><span>Leo</span></a></li>
+					<li class="sw-li swiper-slide"><a href="#"><strong>处女座</strong><span>Virgo</span></a></li>
+					<li class="sw-li swiper-slide"><a href="#"><strong>天秤座</strong><span>Libra</span></a></li>
+					<li class="sw-li swiper-slide"><a href="#"><strong>天蝎座</strong><span>Scorpio</span></a></li>
+					<li class="sw-li swiper-slide"><a href="#"><strong>射手座</strong><span>Sagittarius</span></a></li>
+					<li class="sw-li swiper-slide"><a href="#"><strong>摩羯座</strong><span>Capricorn</span></a></li>
+					<li class="sw-li swiper-slide"><a href="#"><strong>水瓶座</strong><span>Aquarius</span></a></li>
+					<li class="sw-li swiper-slide"><a href="#"><strong>双鱼座</strong><span>Pisces</span></a></li>
+				</ul>
+			</div>
+		</div>
+		</div>
+	</section>
+
+	<div id="liu">
+		
+	</div>
+	
+</body>
+
+	<script>
+		require(['jquery','otherxz',"load"],function($,otherxz,load){
+			$(function(){
+				function setFontSize(){
+					// 设计稿 640px
+					var width = document.documentElement.clientWidth;
+					//使用设计稿与设备宽度的比例计算 font size
+					var fontSize = (width / 640) * 100;
+					document.getElementsByTagName("html")[0].style.fontSize = fontSize + "px";
+				}
+				//监听 resize 变化
+				$(window).on("resize",setFontSize);
+				//立即执行 计算 font size
+				setFontSize(); 
+			  
+			
+		});
+
+	})
+
+
+	</script>
+
+	
+	
+</html>

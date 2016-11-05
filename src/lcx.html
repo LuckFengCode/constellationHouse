@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" 
+		content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<title></title>
+		<link rel="stylesheet" href="css/lcx.css"/>
+		<link rel="stylesheet" href="css/common.css"/>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/swiper.min.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/swiper.min.css">
+		<script src="js/require.js"></script>
+		<script src="js/config.js"></script>
+		<script src="js/index1.js"></script>
+		<script src="js/zepto.min.js"></script>
+		<script language="javascript" src="js/YMDClass.js"></script>
+		<script src="js/require.js"></script>
+		<script src="js/config.js"></script>
+		<script src="js/lcx.js"></script>
+		<script src="js/common.js"></script>
+		<script src="js/index1.js"></script>
+		<script src="js/xiangqing.js"></script>
+		<!--<script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>-->
+		<script>
+			//加载头部和尾部
+			require(["load","jquery"],function(load,$){
+				load($('#indexHeader'),"html/header.html",function(){
+					common();
+				});
+				load($('#indexMenu'),"html/index1.html",function(){
+					index1();
+				});
+				load($('#indexlunbo'),"lt.html",function(){});
+				load($('#indexFooter'),"html/footer.html",function(){});
+				
+			});
+		</script>
+	</head>
+	<body>
+		<div id="indexHeader"></div>
+		<div id="indexMenu"></div>
+		<div id="indexlunbo"></div>
+		<div class="firstMode">
+			<section class="box">
+				<h2 class="bar"><strong>星座查询</strong></h2>
+				<ul class="select_box">
+					<li class="select date1">
+						<span>公历：</span>
+						<select class="year" name="year1"></select>
+						<select class="month" name="month1"></select>
+						<select class="day" name="day1"></select>	
+					</li>
+					<li class="select date2 sel_die">
+						<span>农历：</span>
+						<select class="year" name="year2"></select>
+						<select class="month" name="month2"></select>
+						<select class="day" name="day2"></select>
+					</li>
+					<li class="result"></li>
+					<li class="btn">
+						<button class="cha">查询</button>
+						<a href="javascript:;">精准查询</a>
+					</li>
+				</ul>
+			</section>
+			<section class="ad_c_1">
+				<img class="img1" src="http://t11.baidu.com/it/u=2801732929,3044232157&fm=76" alt="" />
+				<img class="img2" src="http://t12.baidu.com/it/u=693850058,2077844765&fm=76" alt="" />
+				<img class="img3" src="http://t12.baidu.com/it/u=1071428147,4208503843&fm=76" alt="" />
+				<div class="wrap1"></div>
+				<div class="wrap2"></div>
+				<div class="wrap3"></div>
+			</section>
+		</div>
+		<div id="indexMain"></div>
+		<div id="indexFooter"></div>
+	</body>
+	<script>
+		/*年月日三级联动插件 初始化*/
+		new YMDselect('year1','month1','day1');
+		new YMDselect('year2','month2','day2');
+		require(["jquery","xingzuo"],function($,xz){
+			$(function(){
+				function setFontSize(){
+					// 设计稿 640px
+					var width = document.documentElement.clientWidth;
+					var fontSize = (width / 640) * 100;
+					document.getElementsByTagName("html")[0].style.fontSize = fontSize + "px";
+				}
+				$(window).on("resize",setFontSize);
+				setFontSize();
+				$('.date2').on('click',function(){
+					$(this).addClass('can').siblings().removeClass('can');
+					
+					$(this).css('color','black');
+					$('.date1').css('color','darkgray');
+					$('.year1').prop('disabled',true);
+					$('.month1').prop('disabled',true);
+					$('.day1').prop('disabled',true);
+					$('.year2').prop('disabled',false);
+					$('.month2').prop('disabled',false);
+					$('.day2').prop('disabled',false);
+				});
+					
+					$('.cha').on('click',function(){
+						var year1 = $('.can').find('.year').get(0);
+						var year = year1.options[year1.selectedIndex].value;
+						var month1 = $('.can').find('.month').get(0);
+						var month = month1.options[month1.selectedIndex].value;
+						var day1 = $('.can').find('.day').get(0);
+						var day = day1.options[day1.selectedIndex].value;
+						var info = $('.can').find('span').html();
+						xz(info,year,month,day);
+					});
+					
+				$('.date1').on('click',function(){
+					$(this).addClass('can').siblings().remove('can');
+					$(this).css('color','black');
+					$('.date2').css('color','darkgray');
+					$('.year2').prop('disabled',true);
+					$('.month2').prop('disabled',true);
+					$('.day2').prop('disabled',true);
+					$('.year1').prop('disabled',false);
+					$('.month1').prop('disabled',false);
+					$('.day1').prop('disabled',false);
+				});	
+			});
+		});
+	</script>
+</html>

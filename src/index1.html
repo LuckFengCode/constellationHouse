@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<script src="js/require.js"></script>
+	<script src="js/config.js"></script>
+	<script src="js/index1.js"></script>
+</head>
+<body>
+	<section>
+		<div class="all-constellation swiper-container">
+			<ul class="swiper-wrapper">
+				<li data-name="1;白羊座;Aries;images/xz_1.png;3.21-4.19 火象" class="swiper-slide">
+					<em>今日</em>
+					<a href="##"><span><img src="images/1.gif" alt=""></span></a>
+					<strong>白羊座</strong>
+					<small>3.21-4.19</small>
+				</li>
+				<li data-name="2;金牛座;Taurus;images/xz_2.png;4.20-5.20 土象" class="swiper-slide">
+					<em>今日</em>
+					<a href="##"><span><img src="images/2.gif" alt=""></span></a>
+					<strong>金牛座</strong>
+					<small>4.20-5.20</small>
+				</li>
+				<li data-name="3;双子座;Gemini;images/xz_3.png;5.21-6.21 风象" class="swiper-slide">
+					<em>今日</em>
+					<a href="##"><span><img src="images/3.gif" alt=""></span></a>
+					<strong>双子座</strong>
+					<small>5.21-6.21</small>
+				</li>
+				<li data-name="4;巨蟹座;Cancer;images/xz_4.png;6.22-7.22 水象" class="swiper-slide">
+					<em>今日</em>
+					<a href="##"><span><img src="images/4.gif" alt=""></span></a>
+					<strong>巨蟹座</strong>
+					<small>6.22-7.22</small>
+				</li>
+				<li data-name="5;狮子座;Leo;images/xz_5.png;7.23-8.22 火象" class="swiper-slide">
+					<em>今日</em>
+					<a href="##"><span><img src="images/5.gif" alt=""></span></a>
+					<strong>狮子座</strong>
+					<small>7.23-8.22</small>
+				</li>
+				<li data-name="6;处女座;Virgo;images/xz_6.png;8.23-9.22 土象" class="swiper-slide">
+					<em>今日</em>
+					<a href="##"><span><img src="images/6.gif" alt=""></span></a>
+					<strong>处女座</strong>
+					<small>8.23-9.22</small>
+				</li>
+				<li class="active" data-name="7;天秤座;Libra;images/xz_7.png;9.23-10.23 风象" class="swiper-slide">
+					<em>今日</em>
+					<a href="##"><span><img src="images/7.gif" alt=""></span></a>
+					<strong>天秤座</strong>
+					<small>9.23-10.23</small>
+				</li>
+				<li data-name="8;天蝎座;Scorpio;images/xz_8.png;10.24-11.22 水象" class="swiper-slide">
+					<em>今日</em>
+					<a href="##"><span><img src="images/8.gif" alt=""></span></a>
+					<strong>天蝎座</strong>
+					<small>10.24-11.22</small>
+				</li>
+				<li data-name="9;射手座;Sagittarius;images/xz_9.png;311.23-12.21 火象" class="swiper-slide">
+					<em>今日</em>
+					<a href="##"><span><img src="images/9.gif" alt=""></span></a>
+					<strong>射手座</strong>
+					<small>11.23-12.21</small>
+				</li>
+				<li data-name="10;摩羯座;Capricorn;images/xz_10.png;12.22-1.19 土象" class="swiper-slide">
+					<em>今日</em>
+					<a href="##"><span><img src="images/10.gif" alt=""></span></a>
+					<strong>摩羯座</strong>
+					<small>12.22-1.19</small>
+				</li>
+				<li data-name="11;水瓶座;Aquarius;images/xz_11.png;1.20-2.18 风象" class="swiper-slide">
+					<em>今日</em>
+					<a href="##"><span><img src="images/11.gif" alt=""></span></a>
+					<strong>水瓶座</strong>
+					<small>1.20-2.18</small>
+				</li>
+				<li data-name="12;双鱼座;Pisces;images/xz_12.png;2.19-3.20 水象" class="swiper-slide">
+					<em>今日</em>
+					<a href="##"><span><img src="images/2.gif" alt=""></span></a>
+					<strong>双鱼座</strong>
+					<small>2.19-3.20</small>
+				</li>
+			</ul>
+		</div>
+	
+	</section>
+</body>
+	<script>
+		require(["jquery"],function($){
+			function setFontSize(){
+				// 设计稿 640px
+				var width = document.documentElement.clientWidth;
+				//使用设计稿与设备宽度的比例计算 font size
+				var fontSize = (width / 640) * 100;
+				document.getElementsByTagName("html")[0].style.fontSize = fontSize + "px";
+			}
+			//监听 resize 变化
+			$(window).on("resize",setFontSize);
+			//立即执行 计算 font size
+			setFontSize();
+		});
+	</script>
+</html>

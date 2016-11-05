@@ -1,0 +1,153 @@
+*{
+    margin:0;
+    padding:0;
+    border:0;
+}
+strong,i,em,small,p{
+    font-style: normal;
+}
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+$path:"../images";
+
+@mixin border($width,$style,$color){
+    border : $width $style $color;
+}
+
+@mixin radius($radius: 15px){
+    border-radius: $radius;
+}
+
+#luck_position{
+    margin-top: 0.8rem;
+    color: #398fcb;
+    background: #f5f5f5;
+    height: 0.76rem;
+    overflow: hidden;
+    strong{
+        font-size: 0.3rem;
+        line-height:0.76rem ;
+        background: url("#{$path}/icon_position.png") no-repeat 0 50%;
+        display: block;
+        background-size: 0.26rem;
+        padding-left: 0.4rem;
+        margin-left: 0.20rem;
+        font-weight: bold;
+    }
+}
+
+.luck_ul ul{
+    list-style: none;
+}
+.luck_ul li{
+    clear: both;
+    position: relative;
+    overflow: hidden;
+}
+.luck_ul li u {
+    background: #e5e5e5 url("#{$path}/fortune_liop.png");
+    border : 5px solid #fff;
+    background-size: 0.4rem auto;
+    width: 0.4rem;
+    height: 0.4rem;
+    float: right;
+    z-index: 99;
+    position: absolute;
+    right: 0;
+    top: 0;
+    @include radius(0.3rem);
+}
+.luck_ul li p{
+    padding:0.1rem 0;
+    border-bottom: dashed 1px #eee;
+    height: 1.68rem;
+    overflow: hidden;
+}
+.luck_ul li i {
+    float: left;
+    background: #dcf1f9;
+    border-radius: 50%;
+    margin: 0 0.2rem;
+    
+    a {
+        display: block;
+        height: 1.68rem;
+        overflow: hidden;
+         img{
+            width: 1.6rem;
+        }
+    }
+    
+}
+.luck_ul li strong {
+//  display: inline-block;
+    vertical-align: middle;
+    font-size: 0.32rem;
+    float: left;
+    margin-top:0.1rem;
+}
+.luck_ul, .luck_ul a {
+    color: #408FC4;
+}
+.luck_ul li small {
+     margin-top:0.1rem;
+    font-size: 0.24rem;
+    background: #f5b9cf;
+    border-radius: 10px;
+    color: #fff;
+    padding: 0 0.1rem;
+    margin-left: 0.1rem;
+//  display: inline-block;
+    vertical-align: middle;
+    float: left;
+}
+.luck_ul li .more{
+    display: block;
+   
+}
+.luck_ul li .more em{
+    background: url("#{$path}/icon_star.png") repeat-x;
+    height: 16px;
+    display: inline-block;
+    overflow: hidden;
+    background-size: 16px auto;
+ 
+}
+.luck_ul li .more .star_m{
+    width: 80px;
+    position: absolute;
+    left:32%;
+    top:34%;
+
+    em {
+         display: block;
+        background-position: 0 -16px;
+    }
+}
+.luck_ul li .more span {
+    font-size: 0.28rem;
+    color: #888;
+    height: 0.8rem;
+    overflow: hidden;
+    display: block;
+    margin-top: 0.06rem;
+    line-height: 140%;
+    position: absolute;
+    left:32%;
+    top:60%;
+}
+#btn_top1 {
+    opacity: 0.3;
+    background: #408fc4 url(../images/to_top.png) center 50% no-repeat;
+    border-radius: 50%;
+    position: fixed;
+    right: 1px;
+    bottom: 60px;
+    width: 36px;
+    height: 36px;
+    z-index: 999999;
+    display: none;
+}

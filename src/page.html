@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Document</title>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/require.js"></script>
+	<script src="js/config.js"></script>
+
+	<script src="js/page.js"></script>
+
+	<link rel="stylesheet" href="css/page.css">
+
+
+	<script>
+	$(function(){
+
+		function setFontSize(){
+			// 设计稿 640px
+			var width = document.documentElement.clientWidth;
+			var fontSize = (width / 640) * 100;
+			document.getElementsByTagName("html")[0].style.fontSize = fontSize + "px";
+		}
+		$(window).on("resize",setFontSize);
+		setFontSize();
+
+
+
+	})
+	</script>
+
+</head>
+<body>
+	<section id="jee">
+<!-- 	<div id="region">
+	<strong>白羊座专区</strong>
+	<dl>
+	<dt><img src="images/page/1.jpg" alt=""></dt>
+	<dd>
+	<p><a href="">美色当前，白羊男能控制不垂涎吗？</a></p>
+	<span>
+	身为火象星座的一员，他的行动力可不是盖...</span>
+	</dd>
+	</dl>
+	<ul>
+	<li><a href="">白羊头脑发热闪婚了，会后悔吗？</a></li>
+	<li><a href="">白羊座花痴起来都啥样儿</a></li>
+	<li><a href="">白羊座最想要的异性</a></li>
+	<li><a href="">会撩：讨白羊座恋人欢心的最佳方法</a></li>
+	<li><a href="">白羊座男感情里需要啥</a></li>
+	</ul>
+</div>
+<div id="love"></div>
+<div id="character"></div>
+<div id="fashion"></div>
+<div id="luck"></div>
+<div id="knowledge"></div>
+<div id="emotion"></div> -->
+	</section>
+
+	<footer>
+	<span>手机版</span>
+	<!-- <span><a href="http://www.xzw.com">电脑版</a></span> -->
+	<span>电脑版</span>
+	<p>© 星座屋(xzw.com)</p>
+	<p>站长统计</p>
+	<p class="lastp">本站内容仅供娱乐</p>
+	</footer>
+	<div id="topbtn"></div>
+</body>
+</html>
